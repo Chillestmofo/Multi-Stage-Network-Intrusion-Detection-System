@@ -1,0 +1,53 @@
+{
+  "model_version": "1.0.0",
+  "created_date": "2026-01-15",
+  "dataset": "CICIDS-2017",
+  "framework": "scikit-learn",
+  "models": {
+    "normal_filter": {
+      "type": "RandomForestClassifier",
+      "accuracy": 0.96,
+      "purpose": "Stage 1: Benign traffic filter"
+    },
+    "dos_classifier": {
+      "type": "RandomForestClassifier",
+      "accuracy": 0.98,
+      "purpose": "Stage 2: DoS detection"
+    },
+    "ddos_classifier": {
+      "type": "RandomForestClassifier",
+      "accuracy": 0.97,
+      "purpose": "Stage 2: DDoS detection"
+    },
+    "portscan_classifier": {
+      "type": "RandomForestClassifier",
+      "accuracy": 0.95,
+      "purpose": "Stage 2: Port scanning detection"
+    },
+    "bruteforce_classifier": {
+      "type": "RandomForestClassifier",
+      "accuracy": 0.94,
+      "purpose": "Stage 2: Brute force detection"
+    },
+    "webattack_classifier": {
+      "type": "RandomForestClassifier",
+      "accuracy": 0.93,
+      "purpose": "Stage 2: Web attack detection"
+    }
+  },
+  "feature_count": 78,
+  "training_samples": 2830743,
+  "test_samples": 708186,
+  "preprocessing": {
+    "scaling": "StandardScaler",
+    "encoding": "LabelEncoder for categorical features"
+  },
+  "thresholds": {
+    "normal_confidence": 0.9,
+    "attack_confidence": 0.7
+  },
+  "performance": {
+    "avg_inference_time_ms": 2.5,
+    "max_flows_per_second": 400
+  }
+}

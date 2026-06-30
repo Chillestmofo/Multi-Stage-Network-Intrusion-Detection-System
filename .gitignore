@@ -1,0 +1,61 @@
+# ======================
+# Python cache
+# ======================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ======================
+# Virtual environments
+# ======================
+venv/
+env/
+.venv/
+
+# ======================
+# OS junk
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# IDE / Editor
+# ======================
+.vscode/
+.idea/
+
+# ======================
+# Jupyter
+# ======================
+.ipynb_checkpoints/
+
+# ======================
+# Logs
+# ======================
+*.log
+
+# ======================
+# Network captures
+# ======================
+*.pcap
+*.pcapng
+
+# ======================
+# Large datasets (IMPORTANT)
+# ======================
+*.csv
+data/
+datasets/
+
+# ======================
+# Temporary files
+# ======================
+tmp/
+temp/
+
+# ======================
+# (OPTIONAL) Model artifacts
+# Uncomment if models are too large
+# ======================
+# *.pkl
